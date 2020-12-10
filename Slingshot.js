@@ -12,10 +12,15 @@ class SlingShot{
         this.pointB = pointB
         this.sling = Constraint.create(options);
         World.add(world, this.sling);
+        
     }
 
     fly(){
         this.sling.bodyA = null;
+    }
+    attach(body){
+        this.sling.bodyA=body;
+        
     }
 
     display(){
